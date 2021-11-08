@@ -1,6 +1,7 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int)-> list[int]:
         memo ={}
+        nums.sort
         for i in range(len(nums)):
             memo[target - nums[i]] = i
         for i in range(len(nums)):
@@ -9,4 +10,4 @@ class Solution:
 
 soln = Solution()
 print(soln.twoSum([2,7,11,15], 9))
-            
+             
